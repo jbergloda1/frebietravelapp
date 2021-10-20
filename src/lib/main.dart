@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frebietravel/Screens/Welcome-screen.dart';
-import 'package:frebietravel/constants.dart';
+import 'package:frebietravel/Screens/Home/Welcome-screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,10 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primaryColor: Colors.white,
-        scaffoldBackgroundColor: kPrimaryColor,
-      ),
+      theme: ThemeData(),
       home: WelcomeScreen(),
     );
   }
