@@ -16,6 +16,8 @@ class Body extends StatelessWidget {
         children: <Widget>[
           Header(
             color: Colors.grey,
+            textColor: kPrimaryColor,
+            child: Container(),
           ),
           Container(
             child: Column(

@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:frebietravel/constants.dart';
 
 class Header extends StatelessWidget {
+  final Widget child;
+  final Color textColor;
   final Color color;
-  const Header({Key? key, required this.color}) : super(key: key);
+  const Header({
+    Key? key,
+    required this.color,
+    required this.child,
+    required this.textColor,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +26,48 @@ class Header extends StatelessWidget {
             "LET'S GO!",
             style: TextStyle(
               fontWeight: FontWeight.w700,
-              color: kPrimaryColor,
+              color: textColor,
             ),
           ),
-          Divider(
-            height: 20,
-            thickness: 1,
-            color: color,
+          Stack(
+            clipBehavior: Clip.none,
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Container(
+                    width: size.width * 0.45,
+                    child: Divider(
+                      height: 20,
+                      thickness: 1,
+                      color: color,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: size.width * 0.15,
+                    child: Divider(
+                      height: 20,
+                      thickness: 1,
+                      color: color,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: size.width * 0.1,
+                    child: Divider(
+                      height: 20,
+                      thickness: 1,
+                      color: color,
+                    ),
+                  ),
+                ],
+              ),
+              child,
+            ],
           ),
         ],
       ),
